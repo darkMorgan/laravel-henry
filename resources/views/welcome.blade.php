@@ -1,90 +1,130 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>¡Que viva la U!</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>¡Viva Alianza!</title>
+
+    <!-- Fuentes -->
+    <link rel="preconnect" href="https://fonts.bunny.net">
+    <link href="https://fonts.bunny.net/css?family=instrument-sans:400,500,600" rel="stylesheet" />
+
+    <!-- Estilos -->
     <style>
+        /* Fondo con imagen y superposición */
         body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.3)), 
+                        url('https://caretas.pe/wp-content/uploads/2024/01/Alianza-Lima-presentara-a-su-equipo-para-este-2024.png') 
+                        no-repeat center center/cover;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: white;
             text-align: center;
+            font-family: 'Instrument Sans', sans-serif;
+            overflow: hidden;
+            position: relative;
         }
-        header {
-            background-color: #1E3A8A;
-            color: white;
-            padding: 20px;
-            font-size: 24px;
+
+        /* Animación de partículas */
+        .particles span {
+            position: absolute;
+            bottom: 0;
+            width: 6px; height: 6px;
+            background: rgba(255, 255, 255, 0.8);
+            animation: floatUp 6s infinite ease-in-out;
+        }
+
+        @keyframes floatUp {
+            from { transform: translateY(0) scale(1); opacity: 1; }
+            to { transform: translateY(-100vh) scale(1.5); opacity: 0; }
+        }
+
+        /* Contenedor con efecto glassmorphism */
+        .content {
+            position: relative;
+            z-index: 1;
+            padding: 2rem;
+            backdrop-filter: blur(15px);
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            animation: fadeIn 1.5s ease-in-out;
+            width: 80%;
+            max-width: 600px;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+        }
+
+        /* Título con animación de brillo */
+        .viva-alianza {
+            font-size: 4rem;
             font-weight: bold;
-            animation: fadeInDown 1s ease-out;
+            text-shadow: 0px 0px 15px rgba(255, 255, 255, 1);
+            animation: glow 2s infinite alternate;
+            letter-spacing: 3px;
         }
-        main {
-            max-width: 800px;
-            margin: 20px auto;
-            padding: 20px;
-            background: white;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-            border-radius: 10px;
-            animation: fadeInUp 1s ease-out;
-        }
-        h2 {
-            color: #1E3A8A;
-        }
-        footer {
-            background-color: #1E3A8A;
+
+        /* Botones */
+        .btn {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 14px 28px;
+            font-size: 1rem;
+            font-weight: 700;
+            border-radius: 50px;
+            text-decoration: none;
+            transition: all 0.3s ease-in-out;
+            border: 2px solid white;
             color: white;
-            padding: 10px;
-            margin-top: 20px;
-            animation: fadeIn 2s ease-out;
         }
-        @keyframes fadeInDown {
-            from { opacity: 0; transform: translateY(-50px); }
-            to { opacity: 1; transform: translateY(0); }
+
+        .btn-primary {
+            background: rgba(0, 102, 255, 0.7);
         }
-        @keyframes fadeInUp {
-            from { opacity: 0; transform: translateY(50px); }
-            to { opacity: 1; transform: translateY(0); }
+
+        .btn-primary:hover {
+            background: rgba(0, 102, 255, 1);
+            box-shadow: 0px 0px 15px rgba(0, 102, 255, 0.8);
         }
+
+        /* Animaciones */
         @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes glow {
+            from { text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.7); }
+            to { text-shadow: 0px 0px 25px rgba(255, 255, 255, 1); }
         }
     </style>
 </head>
 <body>
+    <!-- Partículas en movimiento -->
+    <div class="particles">
+        <span style="left:5%; animation-duration: 5s;"></span>
+        <span style="left:25%; animation-duration: 6s;"></span>
+        <span style="left:50%; animation-duration: 4s;"></span>
+        <span style="left:75%; animation-duration: 7s;"></span>
+        <span style="left:95%; animation-duration: 5.5s;"></span>
+    </div>
 
-    <header>
-        ¡Que viva la U!
-    </header>
-
-    <main>
-        <section>
-            <h2>Historia</h2>
-            <p>Nuestra universidad ha sido un pilar fundamental en la educación superior,
-            formando generaciones de profesionales comprometidos con la excelencia y la innovación.</p>
-        </section>
-
-        <section>
-            <h2>Eventos</h2>
-            <ul>
-                <li>Conferencias magistrales con expertos internacionales</li>
-                <li>Competencias deportivas interuniversitarias</li>
-                <li>Ferias de innovación y emprendimiento</li>
-            </ul>
-        </section>
-
-        <section>
-            <h2>Misión</h2>
-            <p>Brindar educación de calidad, fomentando la investigación y el desarrollo
-            para contribuir al progreso de la sociedad.</p>
-        </section>
-    </main>
-
-    <footer>
-        &copy; 2025 ¡Que viva la U! - Todos los derechos reservados.
-    </footer>
-
+    <div class="content">
+        <h1 class="viva-alianza">¡Viva Alianza!</h1>
+        @if (Route::has('login'))
+            <nav>
+                @auth
+                    <a href="{{ url('/dashboard') }}" class="btn btn-primary">Dashboard</a>
+                @else
+                    <a href="{{ route('login') }}" class="btn btn-primary">Log in</a>
+                    @if (Route::has('register'))
+                        <a href="{{ route('register') }}" class="btn btn-primary">Register</a>
+                    @endif
+                @endauth
+            </nav>
+        @endif
+    </div>
 </body>
 </html>
