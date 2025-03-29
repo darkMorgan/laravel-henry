@@ -13,7 +13,7 @@
     <style>
         body {
             background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.3)), 
-                        url('https://caretas.pe/wp-content/uploads/2024/01/Alianza-Lima-presentara-a-su-equipo-para-este-2024.png') 
+                        url('https://cdn.joinnus.com/prime/alianzalima/img/banner-seo.jpg') 
                         no-repeat center center/cover;
             min-height: 100vh;
             display: flex;
@@ -94,7 +94,7 @@
             </nav>
         @endif
         
-        <p class="autor">Creado por Henry Valdez Zevallos</p>
+        <p class="autor">Creado por Arturo Bullon</p>
     </div>
 </body>
 </html>
